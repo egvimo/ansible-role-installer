@@ -16,14 +16,14 @@
   ansible.builtin.unarchive:
     src: /tmp/starship.tar.gz
     dest: /usr/local/bin
-    remote_src: yes
+    remote_src: true
     creates: /usr/local/bin/starship
-  become: yes
+  become: true
 
 - name: "Add Starship configuration to .bashrc for user {{ ansible_user }}"
   ansible.builtin.lineinfile:
     dest: "{{ ansible_user_dir }}/.bashrc"
-    create: yes
+    create: true
     line: 'eval "$(starship init bash)"'
     regexp: '^eval "$(starship init bash)"'
     owner: "{{ ansible_user }}"

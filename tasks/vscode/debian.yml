@@ -6,6 +6,6 @@
 - name: Install Visual Studio Code
   apt:
     deb: https://go.microsoft.com/fwlink/?LinkID=760868
-    update_cache: yes
-  become: yes
+    update_cache: true
+  become: true
   when: "'code' not in ansible_facts.packages"

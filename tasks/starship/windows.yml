@@ -12,7 +12,7 @@
 - name: "Add Starship configuration to {{ profile_path.stdout | trim }}"
   community.windows.win_lineinfile:
     path: "{{ profile_path.stdout | trim }}"
-    create: yes
+    create: true
     line: "Invoke-Expression (&starship init powershell)"
     regexp: '^Invoke-Expression \(&starship init powershell\)'
     state: present

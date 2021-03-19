@@ -4,7 +4,7 @@
   tasks:
     - name: Include role
       include_role:
-        name: installer
+        name: egvimo.installer
       vars:
         ansible_user: root
         installer_packages:

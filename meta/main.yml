@@ -21,3 +21,10 @@ galaxy_info:
 
   galaxy_tags:
     - installer
+    - apt
+    - scoop
+    - brave
+    - chrome
+    - kubectl
+    - starship
+    - vscode

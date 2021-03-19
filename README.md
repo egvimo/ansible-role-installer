@@ -1,5 +1,9 @@
 # Installer
 
+[![Molecule Test](https://github.com/egvimo/ansible-role-installer/actions/workflows/molecule-test.yml/badge.svg)](https://github.com/egvimo/ansible-role-installer/actions/workflows/molecule-test.yml)
+
+> This role includes tasks to setup my personal systems and is designed according to my preferences. It's not meant to be a universal tool, but you can use it as inspiration for your own playbooks.
+
 Ansible role to dynamically install different software from different sources.
 
 This role contains the following custom install tasks:

@@ -12,6 +12,7 @@ This role contains the following custom install tasks:
 - Google Chrome
 - kubectl
 - Starship
+- Syncthing
 - Visual Studio Code
 
 If the package is not one of the above, then the `apt` package manager (`scoop` for Windows hosts) is used to install the package.

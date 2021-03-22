@@ -1,11 +1,11 @@
 ---
 - name: Gather package facts
-  package_facts:
+  ansible.builtin.package_facts:
     manager: auto
 
 # TODO Migrate to APT repository, when available
 - name: Install bat
-  apt:
+  ansible.builtin.apt:
     deb: "https://github.com/sharkdp/bat/releases/download/v{{ bat_version }}/bat_{{ bat_version }}_arm64.deb"
     update_cache: true
   become: true

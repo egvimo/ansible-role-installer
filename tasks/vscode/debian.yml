@@ -1,10 +1,10 @@
 ---
 - name: Gather package facts
-  package_facts:
+  ansible.builtin.package_facts:
     manager: auto
 
 - name: Install Visual Studio Code
-  apt:
+  ansible.builtin.apt:
     deb: https://go.microsoft.com/fwlink/?LinkID=760868
     update_cache: true
   become: true

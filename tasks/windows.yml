@@ -1,0 +1,15 @@
+---
+- name: Ensure Extras bucket is present
+  community.windows.win_scoop_bucket:
+    name: extras
+    state: present
+
+- name: Ensure Extras bucket is present
+  community.windows.win_scoop_bucket:
+    name: java
+    state: present
+
+- name: "Install '{{ installer_package }}' via Scoop"
+  community.windows.win_scoop:
+    name: "{{ installer_package }}"
+    state: present

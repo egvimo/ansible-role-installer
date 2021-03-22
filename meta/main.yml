@@ -26,6 +26,7 @@ galaxy_info:
     - bat
     - brave
     - chrome
+    - docker
     - kubectl
     - starship
     - syncthing

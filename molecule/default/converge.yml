@@ -11,6 +11,7 @@
           - bat
           - brave
           - chrome
+          - docker
           - kubectl
           - screen
           - starship

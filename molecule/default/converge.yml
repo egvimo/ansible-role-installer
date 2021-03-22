@@ -8,9 +8,11 @@
       vars:
         ansible_user: root
         installer_packages:
+          - bat
           - brave
           - chrome
           - kubectl
           - screen
           - starship
+          - syncthing
           - vscode

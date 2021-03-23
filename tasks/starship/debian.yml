@@ -11,13 +11,14 @@
     checksum: "sha256:{{ starship_checksum.content }}"
     dest: /tmp/starship.tar.gz
     mode: "0755"
+  register: starship_archive
 
 - name: Extract
   ansible.builtin.unarchive:
     src: /tmp/starship.tar.gz
     dest: /usr/local/bin
     remote_src: true
-    creates: /usr/local/bin/starship
+  when: starship_archive.changed
   become: true
 
 - name: "Add Starship configuration to .bashrc for user {{ ansible_user }}"

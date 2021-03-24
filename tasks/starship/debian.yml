@@ -20,7 +20,7 @@
     dest: /usr/local/bin
     remote_src: true
   become: true
-  when: starship_archive.changed
+  when: starship_archive.changed # noqa no-handler
 
 - name: "Add Starship configuration to .bashrc for user {{ ansible_user }}"
   ansible.builtin.lineinfile:

@@ -33,3 +33,7 @@ jobs:
 
       - name: Run molecule tests
         run: molecule test
+
+      - name: Import role to Galaxy
+        if: github.ref == 'refs/heads/main'
+        run: ansible-galaxy role import --api-key ${{ secrets.ANSIBLE_GALAXY_API_KEY }} $(echo ${{ github.repository }} | cut -d/ -f1) $(echo ${{ github.repository }} | cut -d/ -f2)

@@ -20,6 +20,23 @@ This role contains the following custom install tasks:
 
 If the package is not one of the above, then the `apt` package manager (`scoop` for Windows hosts) is used to install the package.
 
+## Installation
+
+The latest version of the role can be installed via Ansible Galaxy:
+
+```shell
+ansible-galaxy install egvimo.installer
+```
+
+Or directly from the repository via `requirements.yml`:
+
+```yml
+roles:
+  - name: egvimo.installer
+    src: git+https://github.com/egvimo/ansible-role-installer.git
+    version: main # Or any other Git branch, tag or commit
+```
+
 ## Usage
 
 ```yml

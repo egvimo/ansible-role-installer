@@ -1,13 +1,12 @@
 ---
-- name: Ensure Extras bucket is present
+# TODO Run this only once for a play
+- name: Ensure additional buckets are present
   community.windows.win_scoop_bucket:
-    name: extras
+    name: "{{ item }}"
     state: present
-
-- name: Ensure Extras bucket is present
-  community.windows.win_scoop_bucket:
-    name: java
-    state: present
+  loop:
+    - extras
+    - java
 
 - name: "Install '{{ installer_package }}' via Scoop"
   community.windows.win_scoop:

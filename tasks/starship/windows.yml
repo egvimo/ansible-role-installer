@@ -7,6 +7,7 @@
 - name: Get profile path
   ansible.windows.win_shell: $PROFILE
   changed_when: false
+  check_mode: false
   register: profile_path
 
 - name: "Add Starship configuration to {{ profile_path.stdout | trim }}"
